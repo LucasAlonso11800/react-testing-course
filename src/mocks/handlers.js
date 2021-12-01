@@ -8,5 +8,14 @@ export const handlers = [
                 { name: 'Vanilla', imagePath: '' }
             ])
         );
+    }),
+    rest.get("http://localhost:3030/toppings", (req, res, ctx) => {
+        return res(
+            ctx.json([
+                { name: 'Cherries', imagePath: '' },
+                { name: 'M&Ms', imagePath: '' },
+                { name: 'Hot fudge', imagePath: '' }
+            ])
+        );
     })
 ];
