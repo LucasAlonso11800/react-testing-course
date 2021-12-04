@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 
-// import OrderConfirmation from './pages/confirmation/OrderConfirmation';
-import OrderEntry from './pages/Entry/OrderEntry';
-import OrderSummary from './pages/Summary/OrderSummary';
+import OrderConfirmation from './pages/confirmation/OrderConfirmation';
+import OrderEntry from './pages/entry/OrderEntry';
+import OrderSummary from './pages/summary/OrderSummary';
 
 import { OrderDetailsProvider } from './contexts/OrderDetails';
 
@@ -19,9 +19,9 @@ export default function App() {
     case 'review':
       Component = OrderSummary;
       break;
-    // case 'completed':
-    //   Component = OrderConfirmation;
-    //   break;
+    case 'completed':
+      Component = OrderConfirmation;
+      break;
     default:
   }
 
